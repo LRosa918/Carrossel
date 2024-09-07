@@ -1,0 +1,88 @@
+body{
+    margin: 0; 
+    padding: 0;
+    width: 100%;
+    height: 100vh; /*vh se adptar ao monitor*/
+    display: flex;
+    justify-content: center; /*centro da tela mas em cima*/
+    align-items: center; /*no meio*/
+    background-image: url("https://i.pinimg.com/originals/fe/c0/12/fec012aaf16bdc1b5e9436995d652fda.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slider{
+    width: 800px;
+    height: 600px;
+    overflow: hidden; /*n se sobrepor*/
+    margin: 0 auto;
+}
+
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex; /*flexibilidade da tela*/
+}
+
+.slide{
+    margin: 0%, 20%;
+    width: 20%; /*a largura do slide*/
+    transition: 2s;
+    position: relative; 
+}
+
+/*manipulando o tamanho das imagens*/
+.slide img{
+    width: 600px;
+    height: 550px;
+    object-fit: cover;
+}
+
+.slides input {
+    display: none;
+}
+
+.manual-navigation{
+    position: absolute;
+    width: 800px;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-manual{
+    border: 2px solid rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-top: 30px;
+}
+
+.btn-manual:not(:last-child){
+    margin-right: 20px;
+}
+
+.btn-manual:hover{
+    background-color: rgb(159, 0, 251);
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -60%;
+}
+
+#radio5:checked ~ .first{
+    margin-left: -80%;
+}
